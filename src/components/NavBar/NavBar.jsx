@@ -1,23 +1,14 @@
 import classes from './NavBar.module.css'
+import NavPart from './NavPart/NavPart';
 
 const NavBar = () => {
     return (
         <nav className={classes.nav}>
-            <div className={`${classes.item} ${classes.active}`}>
-                <a>Profile</a>
-            </div>
-            <div className={classes.item}>
-                <a>Messages</a>
-            </div>
-            <div className={classes.item}>
-                <a>News</a>
-            </div>
-            <div className={classes.item}>
-                <a>Music</a>
-            </div>
-            <div className={classes.item}>
-                <a>Settings</a>
-            </div>
+            <NavPart to='/profile' content="Profile" />
+            <NavPart to='/dialogs' content="Dialogs" />
+            <NavPart to='/news' content="News" />
+            <NavPart to='/music' content="Music" />
+            <NavPart to='/settings' content="Settings" />
         </nav >
     )
 }
