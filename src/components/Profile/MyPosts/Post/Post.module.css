@@ -1,5 +1,6 @@
 .item {
-    color: wheat
+    color: wheat;
+    padding-top: 10px;
 }
 
 .item img {

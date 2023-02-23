@@ -4,7 +4,7 @@ import classes from './NavPart.module.css'
 const NavPart = (props) => {
     return (
         <div className={classes.dialog}>
-            <NavLink to={props.to} className={({ isActive }) => {
+            <NavLink to={"/dialogs/" + props.id} className={({ isActive }) => {
                 const linkClasses = [classes.a];
                 if (isActive) linkClasses.push(classes.activeLink);
                 return linkClasses.join(" ");

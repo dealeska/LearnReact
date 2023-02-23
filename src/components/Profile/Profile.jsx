@@ -1,15 +1,10 @@
 import MyPosts from './MyPosts/MyPosts';
-import classes from './Profile.module.css'
+import ProfileInfo from './ProfileInfo/ProfileInfo';
 
 const Profile = () => {
     return (
         <div>
-            <div>
-                <img src="https://bipbap.ru/wp-content/uploads/2017/04/0_7c779_5df17311_orig.jpg" />
-            </div>
-            <div className={classes.item}>
-                Ava
-            </div>
+            <ProfileInfo />
             <MyPosts />
         </div>
     )
