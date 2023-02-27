@@ -1,14 +1,10 @@
 import classes from './MyPosts.module.css'
 import Post from './Post/Post';
 
-let postsData = [
-    { id: 1, message: "First post", likesCount: 10 },
-    { id: 2, message: "Second post", likesCount: 24 }
-]
+const MyPosts = (props) => {
 
-let postsElements = postsData.map(p => <Post id={p.id} message={p.message} likesCount={p.likesCount} />)
+    let postsElements = props.posts.map(p => <Post id={p.id} message={p.message} likesCount={p.likesCount} />)
 
-const MyPosts = () => {
     return (
         <div className={classes.item}>
             <h3>My posts</h3>
