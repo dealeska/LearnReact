@@ -9,12 +9,12 @@ const MyPosts = (props) => {
     let textAreaRef = React.createRef();
 
     let addPost = () => {
-        props.addPost()
+        props.dispatch({ type: 'ADD-POST' })
     }
 
     let changeTextarea = () => {
         let text = textAreaRef.current.value
-        props.updateTextarea(text)
+        props.dispatch({ type: 'UPDATE-NEW-POST-TEXT', newText: text })
     }
 
     return (
