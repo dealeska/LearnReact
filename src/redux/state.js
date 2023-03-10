@@ -52,6 +52,7 @@ let store = {
         }
         else if (action.type === UPDATE_NEW_POST_TEXT) {
             this._state.profilePage.newTextarea = action.newText
+            this._callSubscriber(this._state)
         }
         else if (action.type === UPDATE_NEW_MESSAGE_TEXT) {
             this._state.dialogsPage.newMessageText = action.newMessageText

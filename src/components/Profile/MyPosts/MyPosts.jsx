@@ -5,16 +5,16 @@ import Post from './Post/Post';
 
 const MyPosts = (props) => {
 
-    let postsElements = props.posts.map(p => <Post id={p.id} message={p.message} likesCount={p.likesCount} />)
+    let postsElements = props.state.posts.map(p => <Post id={p.id} message={p.message} likesCount={p.likesCount} />)
 
-    let textAreaRef = React.createRef();
+    let textArea = props.state.newTextarea
 
     let addPost = () => {
         props.dispatch(addPostActionCreator())
     }
 
-    let changeTextarea = () => {
-        let text = textAreaRef.current.value
+    let changeTextarea = (e) => {
+        let text = e.target.value
         props.dispatch(updateNewPostTextActionCreator(text))
     }
 
@@ -23,7 +23,7 @@ const MyPosts = (props) => {
             <h3>My posts</h3>
             <div>
                 <div>
-                    <textarea onChange={changeTextarea} ref={textAreaRef}></textarea>
+                    <textarea value={textArea} onChange={changeTextarea}></textarea>
                 </div>
                 <div>
                     <button onClick={addPost}>Add post</button>
