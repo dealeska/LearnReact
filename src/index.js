@@ -4,8 +4,8 @@ import App from './App';
 import store from './redux/state';
 import reportWebVitals from './reportWebVitals';
 
+const root = ReactDOM.createRoot(document.getElementById("root"));
 let renderEntireTree = (state) => {
-    const root = ReactDOM.createRoot(document.getElementById('root'));
     root.render(
         <React.StrictMode>
             <App dispatch={store.dispatch.bind(store)} state={state} />
