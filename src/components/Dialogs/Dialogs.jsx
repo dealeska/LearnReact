@@ -1,4 +1,4 @@
-import { sendMessageActionCreator, updateMessageTextActionCreator } from '../../redux/state';
+import { sendMessageActionCreator, updateMessageTextActionCreator } from '../../redux/dialogs_reducer';
 import classes from './Dialogs.module.css'
 import Message from './Message/Message';
 import NavPart from './NavPart/NavPart';
